@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<% if(!locals.books){%>
+  <%-include("home.ejs")%>
+
+<% }else{ %>
+<div class="container">
+    <div class="d-flex flex-wrap justify-content-center gap position-relative">
+      <% if (locals.books) { %>
+        <% for( let index = 0; index < locals.books.length; index++ ) { %>
+          <a href="/view-book/<%= books[index].key%>/<%= books[index].coverID %>/<%= books[index].authorKey %>">
+          <div class="card" style="width: 18rem;">
+              <% if (books[index].coverID) { %>
+                <img src="https://covers.openlibrary.org/b/ID/<%= books[index].coverID %>-L.jpg" class="card-img-top book-cover" alt="picture of book">
+              <% } else{%>
+                <img src="/images/booksearchlogo.png" class="card-img-top book-cover" alt="picture of book">
+              <% } %>
+              <div class="card-body">
+                <h5 class="card-title"><%= books[index].title %></h5>
+                <p class="card-text"><%= books[index].authorName %></p>
+              </div>
+          </div>
+          </a>
+
+        <% } %>
+      <% } %>        
+  </div>
+</div>
+<% } %>
+
+
+<%- include("partials/footer.ejs") %>

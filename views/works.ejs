@@ -1,0 +1,74 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container d-flex gap">
+    <img src="https://covers.openlibrary.org/b/ID/<%= locals.cover%>-L.jpg" class="work-cover" alt="picture of book">
+    <div>
+        <h1>
+            <%= locals.title %>
+        </h1>
+        <p>
+            by <em><%= locals.author.name  %></em>
+        </p>
+        <p> <% if (locals.description == undefined) {%>Description not available.
+            <% }else if(!locals.description.value){%><%= locals.description %>
+            <% }else{ %><%= locals.description.value %>
+            <% } %>
+        </p>
+    </div>
+</div>
+<hr>
+<div class="container d-flex justify-content-center">
+    <ul class="nav nav-underline" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" data-bs-toggle="tab" aria-current="page" href="#author">Author</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link"  data-bs-toggle="tab" href="#rating">Ratings</a>
+        </li>
+      </ul>
+</div>
+<div class="container  d-flex  tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="author" role="tabpanel" aria-labelledby="author" tabindex="0">
+        <div class="container d-flex gap">
+            <img src="https://covers.openlibrary.org/a/olid/<%= locals.authorKey %>-L.jpg" class="author-cover" alt="picture of author">
+            <div>
+                <p><strong>Name:</strong> <% if (locals.author.name) { %>
+                    <%= locals.author.name %>
+                <% } else{%>
+                    Unavailable
+                <% } %></p>
+                <p><strong>Full Name:</strong> <% if (locals.author.fuller_name) { %>
+                    <%= locals.author.fuller_name %>
+                <% } else{%>
+                    Unavailable
+                <% } %> </p>
+                <p><strong>Bio:</strong> <% if (locals.author.bio) { %>
+                    <%= locals.author.bio %>
+                <% } else{%>
+                    Unavailable
+                <% } %></p>
+                <p><strong>Birthday:</strong> <% if (locals.author.birth_date) { %>
+                    <%= locals.author.birth_date %>
+                <% } else{%>
+                    Unavailable
+                <% } %> </p>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="rating" role="tabpanel" aria-labelledby="rating" tabindex="0">
+        <h3>Summary:</h3>
+        <h5>Average: <%= locals.review.summary.average %></h5>
+        <h5>Count: <%= locals.review.summary.count %></h5>
+
+        <h5>⭐⭐⭐⭐⭐ (<%= locals.review.counts["5"] %>)</h5>
+        <h5>⭐⭐⭐⭐ (<%= locals.review.counts["4"] %>)</h5>
+        <h5>⭐⭐⭐ (<%= locals.review.counts["3"] %>)</h5>
+        <h5>⭐⭐ (<%= locals.review.counts["2"] %>)</h5>
+        <h5>⭐ (<%= locals.review.counts["1"] %>)</h5>
+    </div>
+</div>
+
+
+
+
+<%- include("partials/footer.ejs") %>

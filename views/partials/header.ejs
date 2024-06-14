@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSearch</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="m-0 p-0 min-vh-100 container-fluid d-flex flex-column align-items-stretch justify-content-between"><!--remove justifycontentbetween pansamantala lngt to-->
+    <header class="p-3 header-footer-bg">
+        <div class="container-fluid">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <img class="mb-2 mb-lg-0 img-fluid logo" src="/images/booksearch.png">
+      
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 ms-lg-auto" action="/title" method="post">
+              <div class="d-flex gap">
+                <input type="text" class="form-control" name="search" placeholder="Search for books..." >
+                <!-- <input type="submit" value="Search" formaction="/title"> -->
+              </div>
+            </form>
+    
+
+          </div>
+        </div>
+    </header>
+
+
+<!--
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                      <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2z"/>
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item" href="/title">Title</a></li>
+                    <li><a class="dropdown-item" href="#">Author</a></li>
+                    <li><a class="dropdown-item" href="#">Text</a></li>
+                    <li><a class="dropdown-item" href="#">Subject</a></li>
+                  </ul>
+                </div>    
+-->
+
+    <main class="container-fluid d-flex flex-column align-items-stretch mt-5 mb-5">

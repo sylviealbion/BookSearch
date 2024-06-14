@@ -1,0 +1,78 @@
+body{
+    background-color: #F1E5D1 !important;
+}
+.logo{
+    width: 200px;
+}
+.header-footer-bg{
+    background-color: #C39898;
+}
+.book-cover{
+    background-color: #DBB5B5;
+    height: 20rem;
+    object-fit: fill;
+}
+.gap{
+    gap: 20px;
+}
+a{
+    text-decoration: none !important;
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:link{
+    color:black;
+}
+a:link{
+    color: white;
+}
+
+.btn-primary{
+    --bs-btn-bg: #C39898 !important;
+    --bs-btn-border-color: #C39898 !important;
+    --bs-btn-hover-bg: #987070 !important;
+    --bs-btn-hover-border-color: #987070 !important;
+    --bs-btn-active-bg: #C39898 !important;
+    --bs-btn-active-border-color: #C39898 !important;
+    --bs-btn-disabled-bg: #C39898 !important;
+    --bs-btn-disabled-border-color: #C39898 !important;
+}
+
+.card:hover{
+    transform: scale(1.25);
+    z-index: 1;
+}
+
+h5{
+    font-weight: bold !important;
+    font-family: "Old Standard TT", serif;
+}
+p{
+    font-family: sans-serif;
+}
+
+.work-cover{
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.author-cover{
+    width: 10rem;
+    width: 15rem;
+    object-fit: cover;
+    border-radius: 2%;
+}
+.border-top{
+    color: aqua;
+}
+.author-div{
+    width: 10rem;
+    width: 15rem;
+    background-image: url("/Capstone4/public/images/booksearchlogo.png");
+}
